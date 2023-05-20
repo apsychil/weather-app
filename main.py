@@ -2,11 +2,12 @@
 #Visita: https://mateomisas.simple.ink/
 
 import json
+import os
 import requests
 
 def obtener_info_clima():
     # Realizar una solicitud GET a una API de OpenWeatherMap
-    API_KEY = '508f2197d4bad999c0791cdc2bc11625'
+    API_KEY = os.environ.get('TOKEN')
     ciudad = input('Ingresa el nombre de la ciudad: ')
 
     url = f'https://api.openweathermap.org/data/2.5/weather?q={ciudad}&units=metric&appid={API_KEY}'
