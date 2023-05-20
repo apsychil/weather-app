@@ -21,9 +21,11 @@ def obtener_info_clima():
         temp = data['main']['temp']
         desc = data['weather'][0]['description']
         print(f'Temperatura: {temp} C°')
-        print(f'Descripción: {desc}')
+        print(f'Descripción: {desc}\n')
     else:
         print('Error al llamar a la API. Código de estado:', response.status_code)
 
 if __name__ == '__main__':
+    print("\n¡Bienvenido a esta aplicación del clima!")
+    print("Sólo debes ingresar el nombre de la ciudad para conocer su clima actual.\n")
     obtener_info_clima()
